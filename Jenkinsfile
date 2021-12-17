@@ -8,10 +8,11 @@ node('e2enode'){
             sh 'npm install'
             echo "Modules installed"
         }
-        
+    }  
         stage ('Depoly') {
             nodejs('nodejs') {
         sh 'npm start &'
                 echo "deployed"
     }
        
+        }
