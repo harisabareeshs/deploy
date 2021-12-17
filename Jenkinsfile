@@ -3,12 +3,7 @@ node('e2enode'){
         checkout scm
     }
         
-    stage('Install dependencies') {
-        nodejs('nodejs') {
-            sh 'npm install'
-            echo "Modules installed"
-        }
-    }  
+    
         stage ('Depoly') {
             nodejs('nodejs') {
         sh 'npm start &'
